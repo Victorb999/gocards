@@ -1,0 +1,45 @@
+# Get all cards
+GET http://localhost:8080/cards
+Accept: application/json
+
+###
+
+# Get a card by ID
+GET http://localhost:8080/cards/4
+Accept: application/json
+
+###
+
+# Add new card
+POST http://localhost:8080/cards
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Blue-Eyes White Dragon",
+  "typeCard": "Dragon",
+  "description": "This legendary dragon is a powerful engine of destruction.",
+  "atk": 3000,
+  "def": 2500
+}
+
+###
+
+# Update card by ID
+PUT http://localhost:8080/cards/4
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Dark Magician",
+  "typeCard": "Spellcaster",
+  "description": "The ultimate wizard in terms of attack and defense.",
+  "atk": 2500,
+  "def": 2100
+}
+
+###
+
+# Delete card by ID
+DELETE http://localhost:8080/cards/4
+Accept: application/json
